@@ -1,0 +1,259 @@
+\hypertarget{class_plotter}{}\doxysection{Plotter Class Reference}
+\label{class_plotter}\index{Plotter@{Plotter}}
+
+
+The \mbox{\hyperlink{class_plotter}{Plotter}} class is responsible for designing the custom widget.  
+
+
+
+
+{\ttfamily \#include $<$plotter.\+h$>$}
+
+Inheritance diagram for Plotter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_plotter}
+\end{center}
+\end{figure}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_plotter_aad1a009da2578706830e459b9fc3db2a}\label{class_plotter_aad1a009da2578706830e459b9fc3db2a}} 
+void \mbox{\hyperlink{class_plotter_aad1a009da2578706830e459b9fc3db2a}{update\+Position}} (int, int)
+\begin{DoxyCompactList}\small\item\em update\+Position update position on mouse click \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_plotter_a1807627530de30ae58dff3c42a823497}\label{class_plotter_a1807627530de30ae58dff3c42a823497}} 
+{\bfseries Plotter} (QWidget $\ast$parent=nullptr)
+\item 
+void \mbox{\hyperlink{class_plotter_a06477bf987646f000a8982db1352a11d}{paint\+Event}} (QPaint\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em paint\+Event overload to draw the sculptor on the interface \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plotter_a747796969b129b359ff0d4e43274d3cd}{set\+Tam}} (int nl\+\_\+, int nc\+\_\+)
+\begin{DoxyCompactList}\small\item\em set\+Tam set sculptor size \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plotter_a3bbb22ddb9496d2eb21595fb72848790}{mouse\+Press\+Event}} (QMouse\+Event $\ast$e)
+\begin{DoxyCompactList}\small\item\em mouse\+Press\+Event overload to control mouse click \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plotter_a9162a8a9dec6217d1e0a4dab481e8a07}{mouse\+Move\+Event}} (QMouse\+Event $\ast$e)
+\begin{DoxyCompactList}\small\item\em mouse\+Move\+Event overload to control mouse movement \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plotter_acda413f2aa8f248d3db4193ab66303d5}{mouse\+Release\+Event}} (QMouse\+Event $\ast$e)
+\begin{DoxyCompactList}\small\item\em mouse\+Release\+Event overload to control mouse release \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plotter_a087e4c45392bf24c49e994852a7d6ddf}{load\+Matriz}} (vector$<$ vector$<$ \mbox{\hyperlink{struct_voxel}{Voxel}} $>$$>$ matriz)
+\begin{DoxyCompactList}\small\item\em load\+Matriz load matrix to show the sculptor according to its dimensions \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_plotter}{Plotter}} class is responsible for designing the custom widget. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_plotter_a087e4c45392bf24c49e994852a7d6ddf}\label{class_plotter_a087e4c45392bf24c49e994852a7d6ddf}} 
+\index{Plotter@{Plotter}!loadMatriz@{loadMatriz}}
+\index{loadMatriz@{loadMatriz}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{loadMatriz()}{loadMatriz()}}
+{\footnotesize\ttfamily void Plotter\+::load\+Matriz (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ \mbox{\hyperlink{struct_voxel}{Voxel}} $>$$>$}]{matriz }\end{DoxyParamCaption})}
+
+
+
+load\+Matriz load matrix to show the sculptor according to its dimensions 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matriz} & vector tpy voxel \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{126 \{}
+\DoxyCodeLine{127     nl = matriz.size();}
+\DoxyCodeLine{128     nc = matriz[0].size();}
+\DoxyCodeLine{129     v = matriz;}
+\DoxyCodeLine{130     repaint();}
+\DoxyCodeLine{131 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_plotter_a9162a8a9dec6217d1e0a4dab481e8a07}\label{class_plotter_a9162a8a9dec6217d1e0a4dab481e8a07}} 
+\index{Plotter@{Plotter}!mouseMoveEvent@{mouseMoveEvent}}
+\index{mouseMoveEvent@{mouseMoveEvent}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{mouseMoveEvent()}{mouseMoveEvent()}}
+{\footnotesize\ttfamily void Plotter\+::mouse\+Move\+Event (\begin{DoxyParamCaption}\item[{QMouse\+Event $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+mouse\+Move\+Event overload to control mouse movement 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & pointer to mouse event \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{106 \{}
+\DoxyCodeLine{107     \textcolor{keywordtype}{int} posHorizontal, posVertical;}
+\DoxyCodeLine{108     QRect ret;}
+\DoxyCodeLine{109     ret = rect();}
+\DoxyCodeLine{110     ret.adjust(bh,bv,-\/bh,-\/bv);}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112     \textcolor{keywordflow}{if}(ret.contains(e-\/>pos())\&\& pressed == \textcolor{keyword}{true})\{}
+\DoxyCodeLine{113         posHorizontal = (e-\/>pos().x()-\/bh)*nc/ret.width();}
+\DoxyCodeLine{114         posVertical = (e-\/>pos().y()-\/bv)*nc/ret.width();}
+\DoxyCodeLine{115         emit \mbox{\hyperlink{class_plotter_aad1a009da2578706830e459b9fc3db2a}{updatePosition}}(posHorizontal,posVertical);}
+\DoxyCodeLine{116     \}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_plotter_a3bbb22ddb9496d2eb21595fb72848790}\label{class_plotter_a3bbb22ddb9496d2eb21595fb72848790}} 
+\index{Plotter@{Plotter}!mousePressEvent@{mousePressEvent}}
+\index{mousePressEvent@{mousePressEvent}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{mousePressEvent()}{mousePressEvent()}}
+{\footnotesize\ttfamily void Plotter\+::mouse\+Press\+Event (\begin{DoxyParamCaption}\item[{QMouse\+Event $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+mouse\+Press\+Event overload to control mouse click 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & pointer to mouse event \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{91 \{}
+\DoxyCodeLine{92     \textcolor{keywordtype}{int} posHorizontal, posVertical;}
+\DoxyCodeLine{93     QRect ret;}
+\DoxyCodeLine{94     ret = rect();}
+\DoxyCodeLine{95     pressed = \textcolor{keyword}{true};}
+\DoxyCodeLine{96     ret.adjust(bh,bv,-\/bh,-\/bv);}
+\DoxyCodeLine{97     \textcolor{keywordflow}{if}(ret.contains(e-\/>pos()))\{}
+\DoxyCodeLine{98         posHorizontal = (e-\/>pos().x()-\/bh)*nc/ret.width();}
+\DoxyCodeLine{99         posVertical = (e-\/>pos().y()-\/bv)*nc/ret.width();}
+\DoxyCodeLine{100         emit \mbox{\hyperlink{class_plotter_aad1a009da2578706830e459b9fc3db2a}{updatePosition}}(posHorizontal,posVertical);}
+\DoxyCodeLine{101     \}}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_plotter_acda413f2aa8f248d3db4193ab66303d5}\label{class_plotter_acda413f2aa8f248d3db4193ab66303d5}} 
+\index{Plotter@{Plotter}!mouseReleaseEvent@{mouseReleaseEvent}}
+\index{mouseReleaseEvent@{mouseReleaseEvent}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{mouseReleaseEvent()}{mouseReleaseEvent()}}
+{\footnotesize\ttfamily void Plotter\+::mouse\+Release\+Event (\begin{DoxyParamCaption}\item[{QMouse\+Event $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+mouse\+Release\+Event overload to control mouse release 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & pointer to mouse event \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{121 \{}
+\DoxyCodeLine{122     pressed = \textcolor{keyword}{false};}
+\DoxyCodeLine{123 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_plotter_a06477bf987646f000a8982db1352a11d}\label{class_plotter_a06477bf987646f000a8982db1352a11d}} 
+\index{Plotter@{Plotter}!paintEvent@{paintEvent}}
+\index{paintEvent@{paintEvent}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{paintEvent()}{paintEvent()}}
+{\footnotesize\ttfamily void Plotter\+::paint\+Event (\begin{DoxyParamCaption}\item[{QPaint\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+paint\+Event overload to draw the sculptor on the interface 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & pointer to paint event (default\+: nullptr is a null pointer) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32 \{}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     QPainter painter(\textcolor{keyword}{this});}
+\DoxyCodeLine{35     QBrush brush;}
+\DoxyCodeLine{36     QPen pen;}
+\DoxyCodeLine{37     QColor color;}
+\DoxyCodeLine{38     QRadialGradient gradient(QPointF(1,1),20);}
+\DoxyCodeLine{39     gradient.setColorAt(0, Qt::black);}
+\DoxyCodeLine{40     gradient.setColorAt(1, Qt::white);}
+\DoxyCodeLine{41     painter.setRenderHint(QPainter::Antialiasing, \textcolor{keyword}{true});}
+\DoxyCodeLine{42     pen.setWidth(1);}
+\DoxyCodeLine{43     widthTela = rect().width();}
+\DoxyCodeLine{44     heightTela = rect().height();}
+\DoxyCodeLine{45     widthCel = widthTela/nc;}
+\DoxyCodeLine{46     heightCel = heightTela/nl;}
+\DoxyCodeLine{47     \textcolor{keywordflow}{if} (heightCel > widthCel)\{}
+\DoxyCodeLine{48         dCel = widthCel;}
+\DoxyCodeLine{49     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{50         dCel = heightCel;}
+\DoxyCodeLine{51     \}}
+\DoxyCodeLine{52     bh = (widthTela -\/ nc*dCel)/2;}
+\DoxyCodeLine{53     bv = (heightTela -\/ nl*dCel)/2;}
+\DoxyCodeLine{54     gradient.setRadius(dCel);}
+\DoxyCodeLine{55     gradient.setFocalPoint(-\/0.15*dCel, -\/0.15*dCel);}
+\DoxyCodeLine{56     gradient.setCenter(-\/0.15*dCel, -\/0.15*dCel);}
+\DoxyCodeLine{57     painter.setPen(pen);}
+\DoxyCodeLine{58     painter.drawRect(rect());}
+\DoxyCodeLine{59     qDebug() << nl << nc << v.size() << v[0].size();}
+\DoxyCodeLine{60     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < nl; i++)\{}
+\DoxyCodeLine{61         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < nc; j++)\{}
+\DoxyCodeLine{62             \textcolor{keywordflow}{if}(v[i][j].isOn == \textcolor{keyword}{true})\{}
+\DoxyCodeLine{63                 painter.save();}
+\DoxyCodeLine{64                 painter.translate(j*dCel+bh+dCel/2,}
+\DoxyCodeLine{65                             i*dCel+bv+dCel/2);}
+\DoxyCodeLine{66                 painter.setPen(Qt::NoPen);}
+\DoxyCodeLine{67                 color.setRgb(qRgb(v[i][j].r, v[i][j].g, v[i][j].b));}
+\DoxyCodeLine{68                 gradient.setColorAt(0, Qt::white);}
+\DoxyCodeLine{69                 gradient.setColorAt(0.3, color);}
+\DoxyCodeLine{70                 gradient.setColorAt(1, color.darker());}
+\DoxyCodeLine{71                 painter.setBrush(gradient);}
+\DoxyCodeLine{72                 painter.drawEllipse(-\/dCel/2+1, -\/dCel/2+1, dCel-\/1, dCel-\/1);}
+\DoxyCodeLine{73                 painter.restore();}
+\DoxyCodeLine{74             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{75                 brush.setColor(QColor(255,255,255,0));}
+\DoxyCodeLine{76                 painter.setBrush(brush);}
+\DoxyCodeLine{77                 painter.drawRect(j*dCel+bh,i*dCel+bv,dCel, dCel);}
+\DoxyCodeLine{78             \}}
+\DoxyCodeLine{79         \}}
+\DoxyCodeLine{80     \}}
+\DoxyCodeLine{81 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_plotter_a747796969b129b359ff0d4e43274d3cd}\label{class_plotter_a747796969b129b359ff0d4e43274d3cd}} 
+\index{Plotter@{Plotter}!setTam@{setTam}}
+\index{setTam@{setTam}!Plotter@{Plotter}}
+\doxysubsubsection{\texorpdfstring{setTam()}{setTam()}}
+{\footnotesize\ttfamily void Plotter\+::set\+Tam (\begin{DoxyParamCaption}\item[{int}]{nl\+\_\+,  }\item[{int}]{nc\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+set\+Tam set sculptor size 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nl\+\_\+} & line numbers \\
+\hline
+{\em nc\+\_\+} & collum numbers \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84 \{}
+\DoxyCodeLine{85     nl = nl\_;}
+\DoxyCodeLine{86     nc = nc\_;}
+\DoxyCodeLine{87     repaint();}
+\DoxyCodeLine{88 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+plotter.\+h\item 
+plotter.\+cpp\end{DoxyCompactItemize}

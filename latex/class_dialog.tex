@@ -1,0 +1,101 @@
+\hypertarget{class_dialog}{}\doxysection{Dialog Class Reference}
+\label{class_dialog}\index{Dialog@{Dialog}}
+
+
+The \mbox{\hyperlink{class_dialog}{Dialog}} class is reponsible for opening the dialog box that allows you resize the sculptor.  
+
+
+
+
+{\ttfamily \#include $<$dialog.\+h$>$}
+
+Inheritance diagram for Dialog\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_dialog}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_dialog_ab30ac48588a82983f653f58d50a52ddc}\label{class_dialog_ab30ac48588a82983f653f58d50a52ddc}} 
+{\bfseries Dialog} (QWidget $\ast$parent=nullptr)
+\item 
+QString \mbox{\hyperlink{class_dialog_a56b9017551a8b71873f49e9e93e0e97d}{d\+XDialog}} ()
+\begin{DoxyCompactList}\small\item\em d\+XDialog retrieves the x-\/axis dimension of the sculptor \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_dialog_a0942b58915a4e250ba0a1dc2385b1223}{d\+YDialog}} ()
+\begin{DoxyCompactList}\small\item\em d\+YDialog retrieves the y-\/axis dimension of the sculptor \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_dialog_adb08e81ccc28fd39727eb273bd268550}{d\+ZDialog}} ()
+\begin{DoxyCompactList}\small\item\em d\+ZDialog retrieves the z-\/axis dimension of the sculptor \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_dialog}{Dialog}} class is reponsible for opening the dialog box that allows you resize the sculptor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dialog_a56b9017551a8b71873f49e9e93e0e97d}\label{class_dialog_a56b9017551a8b71873f49e9e93e0e97d}} 
+\index{Dialog@{Dialog}!dXDialog@{dXDialog}}
+\index{dXDialog@{dXDialog}!Dialog@{Dialog}}
+\doxysubsubsection{\texorpdfstring{dXDialog()}{dXDialog()}}
+{\footnotesize\ttfamily QString Dialog\+::d\+XDialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+d\+XDialog retrieves the x-\/axis dimension of the sculptor 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18     \textcolor{keywordflow}{return} ui-\/>lineEditDX-\/>text();}
+\DoxyCodeLine{19 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dialog_a0942b58915a4e250ba0a1dc2385b1223}\label{class_dialog_a0942b58915a4e250ba0a1dc2385b1223}} 
+\index{Dialog@{Dialog}!dYDialog@{dYDialog}}
+\index{dYDialog@{dYDialog}!Dialog@{Dialog}}
+\doxysubsubsection{\texorpdfstring{dYDialog()}{dYDialog()}}
+{\footnotesize\ttfamily QString Dialog\+::d\+YDialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+d\+YDialog retrieves the y-\/axis dimension of the sculptor 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23     \textcolor{keywordflow}{return} ui-\/>lineEditDY-\/>text();}
+\DoxyCodeLine{24 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dialog_adb08e81ccc28fd39727eb273bd268550}\label{class_dialog_adb08e81ccc28fd39727eb273bd268550}} 
+\index{Dialog@{Dialog}!dZDialog@{dZDialog}}
+\index{dZDialog@{dZDialog}!Dialog@{Dialog}}
+\doxysubsubsection{\texorpdfstring{dZDialog()}{dZDialog()}}
+{\footnotesize\ttfamily QString Dialog\+::d\+ZDialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+d\+ZDialog retrieves the z-\/axis dimension of the sculptor 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{28     \textcolor{keywordflow}{return} ui-\/>lineEditDZ-\/>text();}
+\DoxyCodeLine{29 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+dialog.\+h\item 
+dialog.\+cpp\end{DoxyCompactItemize}

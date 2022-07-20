@@ -1,0 +1,684 @@
+\hypertarget{class_sculptor}{}\doxysection{Sculptor Class Reference}
+\label{class_sculptor}\index{Sculptor@{Sculptor}}
+
+
+The \mbox{\hyperlink{class_sculptor}{Sculptor}} class generates a 3D matrix with various drawing functions. She is responsible for creating a sculptor, dynamically allocating a 3D matrix of dimensions nx, ny, nz.  
+
+
+
+
+{\ttfamily \#include $<$sculptor.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sculptor_a0891937e4a9db84369e7922d3023aa67}{Sculptor}} (int nx\+\_\+, int ny\+\_\+, int nz\+\_\+)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_sculptor}{Sculptor}} \mbox{\hyperlink{class_sculptor}{Sculptor}}\textquotesingle{}s constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sculptor_a3c536a107aac6bf67519d3b1a4b4176a}{set\+Color}} (float r\+\_\+, float g\+\_\+, float b\+\_\+)
+\begin{DoxyCompactList}\small\item\em set\+Color function to set shape color \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sculptor_a8f159bf97458326f16d2e238e11be7ff}\label{class_sculptor_a8f159bf97458326f16d2e238e11be7ff}} 
+\mbox{\hyperlink{class_sculptor_a8f159bf97458326f16d2e238e11be7ff}{$\sim$\+Sculptor}} ()
+\begin{DoxyCompactList}\small\item\em $\sim$\+Sculptor \mbox{\hyperlink{class_sculptor}{Sculptor}}\textquotesingle{}s destructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sculptor_a2b957e9d0a2f365f9181af5d116a2b8c}{put\+Voxel}} (int x0, int y0, int z0)
+\begin{DoxyCompactList}\small\item\em put\+Voxel function to put a voxel \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sculptor_a56149f4f3357655535e4374c5d77ab2e}{cut\+Voxel}} (int x0, int y0, int z0)
+\begin{DoxyCompactList}\small\item\em cut\+Voxel function to cut a voxel \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sculptor_a311ad7a0fb83fc67ac1f378be8e99fe1}{put\+Box}} (int x0, int x1, int y0, int y1, int z0, int z1)
+\begin{DoxyCompactList}\small\item\em put\+Box function to put a voxel\textquotesingle{}s box \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sculptor_aa84a1b12b09e9e103fc8d78f8d1bc00f}{cut\+Box}} (int x0, int x1, int y0, int y1, int z0, int z1)
+\begin{DoxyCompactList}\small\item\em cut\+Box function to cut a voxel\textquotesingle{}s box \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sculptor_a794a2b6ee8fc8098fd6150cb46101fc6}{put\+Sphere}} (int xcenter, int ycenter, int zcenter, int radius)
+\begin{DoxyCompactList}\small\item\em put\+Sphere function to put a voxel\textquotesingle{}s sphere \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sculptor_a67ab8c0ba5116adb8af1d01ad373ac15}{cut\+Sphere}} (int xcenter, int ycenter, int zcenter, int radius)
+\begin{DoxyCompactList}\small\item\em cut\+Sphere function to cut a voxel\textquotesingle{}s sphere \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sculptor_a093615b0c2b9b3a17a56300b9b939f39}{put\+Ellipsoid}} (int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)
+\begin{DoxyCompactList}\small\item\em put\+Ellipsoid function to put a volxel\textquotesingle{}s ellipsoid \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sculptor_a18d2922c111c4c13653ee07d878151ad}{cut\+Ellipsoid}} (int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)
+\begin{DoxyCompactList}\small\item\em cut\+Ellipsoid function to cut a volxel\textquotesingle{}s ellipsoid \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sculptor_a4faae5ab2d72f2f682005f468e7e8a92}{write\+OFF}} (string filename)
+\begin{DoxyCompactList}\small\item\em write\+OFF fuction to write a file type OFF \end{DoxyCompactList}\item 
+vector$<$ vector$<$ \mbox{\hyperlink{struct_voxel}{Voxel}} $>$ $>$ \mbox{\hyperlink{class_sculptor_a9fe571665b521aad968628ff6b14e0c6}{get\+Plano}} (int i, int plano=XY)
+\begin{DoxyCompactList}\small\item\em get\+Plano read the interface plan \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sculptor_a4ca53a2f2fbf41ca42dfe729ebe693f1}\label{class_sculptor_a4ca53a2f2fbf41ca42dfe729ebe693f1}} 
+\mbox{\hyperlink{struct_voxel}{Voxel}} $\ast$$\ast$$\ast$ {\bfseries v}
+\item 
+\mbox{\Hypertarget{class_sculptor_ad1e32f9042538419a3bc7b376f7813b8}\label{class_sculptor_ad1e32f9042538419a3bc7b376f7813b8}} 
+int {\bfseries nx}
+\item 
+\mbox{\Hypertarget{class_sculptor_a1ce2ff97ec94927928ab3f5ec4ba6761}\label{class_sculptor_a1ce2ff97ec94927928ab3f5ec4ba6761}} 
+int {\bfseries ny}
+\item 
+\mbox{\Hypertarget{class_sculptor_a33204e7df26a7ee4c7192381a24335d3}\label{class_sculptor_a33204e7df26a7ee4c7192381a24335d3}} 
+int {\bfseries nz}
+\item 
+\mbox{\Hypertarget{class_sculptor_a3f5d2ec3b66d645019b8d81c810a1cd8}\label{class_sculptor_a3f5d2ec3b66d645019b8d81c810a1cd8}} 
+float {\bfseries r}
+\item 
+\mbox{\Hypertarget{class_sculptor_a208c06af69a81a1568df4493868816f1}\label{class_sculptor_a208c06af69a81a1568df4493868816f1}} 
+float {\bfseries g}
+\item 
+\mbox{\Hypertarget{class_sculptor_a7aafd7305ea634252d8288b60536cd96}\label{class_sculptor_a7aafd7305ea634252d8288b60536cd96}} 
+float {\bfseries b}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_sculptor}{Sculptor}} class generates a 3D matrix with various drawing functions. She is responsible for creating a sculptor, dynamically allocating a 3D matrix of dimensions nx, ny, nz. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sculptor_a0891937e4a9db84369e7922d3023aa67}\label{class_sculptor_a0891937e4a9db84369e7922d3023aa67}} 
+\index{Sculptor@{Sculptor}!Sculptor@{Sculptor}}
+\index{Sculptor@{Sculptor}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{Sculptor()}{Sculptor()}}
+{\footnotesize\ttfamily Sculptor\+::\+Sculptor (\begin{DoxyParamCaption}\item[{int}]{nx\+\_\+,  }\item[{int}]{ny\+\_\+,  }\item[{int}]{nz\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_sculptor}{Sculptor}} \mbox{\hyperlink{class_sculptor}{Sculptor}}\textquotesingle{}s constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nx\+\_\+} & number lines of x-\/axis \\
+\hline
+{\em ny\+\_\+} & number lines of y-\/axis \\
+\hline
+{\em nz\+\_\+} & number lines of z-\/axis \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13     nx = nx\_;}
+\DoxyCodeLine{14     ny = ny\_;}
+\DoxyCodeLine{15     nz = nz\_;}
+\DoxyCodeLine{16     v = \textcolor{keyword}{new} \mbox{\hyperlink{struct_voxel}{Voxel}}**[nx];}
+\DoxyCodeLine{17     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < nx; i++)\{}
+\DoxyCodeLine{18         v[i] = \textcolor{keyword}{new} \mbox{\hyperlink{struct_voxel}{Voxel}}*[ny];}
+\DoxyCodeLine{19         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < ny; j++)\{}
+\DoxyCodeLine{20             v[i][j] = \textcolor{keyword}{new} \mbox{\hyperlink{struct_voxel}{Voxel}}[nz];}
+\DoxyCodeLine{21         \}}
+\DoxyCodeLine{22     \}}
+\DoxyCodeLine{23     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < nx; i++)\{}
+\DoxyCodeLine{24         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < ny; j++)\{}
+\DoxyCodeLine{25             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k = 0; k < nz; k++)\{}
+\DoxyCodeLine{26                 v[i][j][k].isOn = \textcolor{keyword}{false};}
+\DoxyCodeLine{27             \}}
+\DoxyCodeLine{28         \}}
+\DoxyCodeLine{29     \}}
+\DoxyCodeLine{30 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sculptor_aa84a1b12b09e9e103fc8d78f8d1bc00f}\label{class_sculptor_aa84a1b12b09e9e103fc8d78f8d1bc00f}} 
+\index{Sculptor@{Sculptor}!cutBox@{cutBox}}
+\index{cutBox@{cutBox}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{cutBox()}{cutBox()}}
+{\footnotesize\ttfamily void Sculptor\+::cut\+Box (\begin{DoxyParamCaption}\item[{int}]{x0,  }\item[{int}]{x1,  }\item[{int}]{y0,  }\item[{int}]{y1,  }\item[{int}]{z0,  }\item[{int}]{z1 }\end{DoxyParamCaption})}
+
+
+
+cut\+Box function to cut a voxel\textquotesingle{}s box 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x0} & initial position to cut a voxel in x-\/axis \\
+\hline
+{\em x1} & final position to cut a voxel in x-\/axis \\
+\hline
+{\em y0} & initial position to cut a voxel in y-\/axis \\
+\hline
+{\em y1} & final position to cut a voxel in y-\/axis \\
+\hline
+{\em z0} & initial position to cut a voxel in z-\/axis \\
+\hline
+{\em z1} & final position to cut a voxel in z-\/axis \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{81 \{}
+\DoxyCodeLine{82     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = x0; i <= x1; i++)\{}
+\DoxyCodeLine{83         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = y0; j <= y1; j++)\{}
+\DoxyCodeLine{84             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k = z0; k <= z1; k++)\{}
+\DoxyCodeLine{85                 \mbox{\hyperlink{class_sculptor_a56149f4f3357655535e4374c5d77ab2e}{cutVoxel}}(i,j,k);}
+\DoxyCodeLine{86             \}}
+\DoxyCodeLine{87         \}}
+\DoxyCodeLine{88     \}}
+\DoxyCodeLine{89 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sculptor_a18d2922c111c4c13653ee07d878151ad}\label{class_sculptor_a18d2922c111c4c13653ee07d878151ad}} 
+\index{Sculptor@{Sculptor}!cutEllipsoid@{cutEllipsoid}}
+\index{cutEllipsoid@{cutEllipsoid}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{cutEllipsoid()}{cutEllipsoid()}}
+{\footnotesize\ttfamily void Sculptor\+::cut\+Ellipsoid (\begin{DoxyParamCaption}\item[{int}]{xcenter,  }\item[{int}]{ycenter,  }\item[{int}]{zcenter,  }\item[{int}]{rx,  }\item[{int}]{ry,  }\item[{int}]{rz }\end{DoxyParamCaption})}
+
+
+
+cut\+Ellipsoid function to cut a volxel\textquotesingle{}s ellipsoid 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xcenter} & ellipsoid center position in x-\/axis \\
+\hline
+{\em ycenter} & ellipsoid center position in y-\/axis \\
+\hline
+{\em zcenter} & ellipsoid center position in z-\/axis \\
+\hline
+{\em rx} & ellipsoid radius on the x-\/axis \\
+\hline
+{\em ry} & ellipsoid radius on the y-\/axis \\
+\hline
+{\em rz} & allipsoid radius on the z-\/axis \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{169 \{}
+\DoxyCodeLine{170     \textcolor{comment}{// FÓRMULA DA ELIPSOIDE: (x -\/ x0)\string^2/a\string^2 + (y -\/ y0)\string^2/b\string^2 + (z -\/ z0)\string^2/c\string^2 <= 1}}
+\DoxyCodeLine{171     \textcolor{comment}{// CASO O RAIO EM ALGUM DOS EIXOS SEJA IGUAL A -\/, TEREMOS UMA ELÍPSE}}
+\DoxyCodeLine{172     \textcolor{keywordtype}{double} dist;}
+\DoxyCodeLine{173     \textcolor{keywordflow}{if}(rx == 0)\{}
+\DoxyCodeLine{174        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j <= ny; j++)\{}
+\DoxyCodeLine{175            \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k = 0; k <= nz; k++)\{}
+\DoxyCodeLine{176                dist = pow(j -\/ ycenter, 2)/pow(ry, 2) + pow(k -\/ zcenter, 2)/pow(rz, 2);}
+\DoxyCodeLine{177                \textcolor{keywordflow}{if}(dist <= 1)\{}
+\DoxyCodeLine{178                    \mbox{\hyperlink{class_sculptor_a56149f4f3357655535e4374c5d77ab2e}{cutVoxel}}(xcenter,j,k);}
+\DoxyCodeLine{179                \}}
+\DoxyCodeLine{180            \}}
+\DoxyCodeLine{181         \}}
+\DoxyCodeLine{182     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(ry == 0)\{}
+\DoxyCodeLine{183        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<= nx; i++)\{}
+\DoxyCodeLine{184            \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k = 0; k <= nz; k++)\{}
+\DoxyCodeLine{185                dist = pow(i -\/ xcenter, 2)/pow(rx, 2) + pow(k -\/ zcenter, 2)/pow(rz, 2);}
+\DoxyCodeLine{186                \textcolor{keywordflow}{if}(dist <= 1)\{}
+\DoxyCodeLine{187                    \mbox{\hyperlink{class_sculptor_a56149f4f3357655535e4374c5d77ab2e}{cutVoxel}}(i,ycenter,k); \textcolor{comment}{//habilita os Voxels no intervalo}}
+\DoxyCodeLine{188                \}}
+\DoxyCodeLine{189            \}}
+\DoxyCodeLine{190         \}}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(rz == 0)\{}
+\DoxyCodeLine{193        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i <= nx; i++)\{}
+\DoxyCodeLine{194            \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0; j <= ny; j++)\{}
+\DoxyCodeLine{195                dist = pow(i -\/ xcenter, 2)/pow(rx, 2) + pow(j -\/ ycenter, 2)/pow(ry, 2);}
+\DoxyCodeLine{196                \textcolor{keywordflow}{if}(dist <= 1)\{}
+\DoxyCodeLine{197                    \mbox{\hyperlink{class_sculptor_a56149f4f3357655535e4374c5d77ab2e}{cutVoxel}}(i,j,zcenter); \textcolor{comment}{//habilita os Voxels no intervalo}}
+\DoxyCodeLine{198                \}}
+\DoxyCodeLine{199            \}}
+\DoxyCodeLine{200         \}}
+\DoxyCodeLine{201     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{202        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < nx; i++)\{}
+\DoxyCodeLine{203            \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < ny; j++)\{}
+\DoxyCodeLine{204                \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k = 0; k < nz; k++)\{}
+\DoxyCodeLine{205                    dist = pow(i -\/ xcenter,2)/pow(rx, 2) + pow(j -\/ ycenter,2)/pow(ry, 2) + pow(k -\/ zcenter,2)/pow(rz, 2);}
+\DoxyCodeLine{206                    \textcolor{keywordflow}{if} (dist <= 1)\{}
+\DoxyCodeLine{207                        \mbox{\hyperlink{class_sculptor_a56149f4f3357655535e4374c5d77ab2e}{cutVoxel}}(i,j,k);}
+\DoxyCodeLine{208                    \}}
+\DoxyCodeLine{209                \}}
+\DoxyCodeLine{210            \}}
+\DoxyCodeLine{211        \}}
+\DoxyCodeLine{212     \}}
+\DoxyCodeLine{213 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sculptor_a67ab8c0ba5116adb8af1d01ad373ac15}\label{class_sculptor_a67ab8c0ba5116adb8af1d01ad373ac15}} 
+\index{Sculptor@{Sculptor}!cutSphere@{cutSphere}}
+\index{cutSphere@{cutSphere}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{cutSphere()}{cutSphere()}}
+{\footnotesize\ttfamily void Sculptor\+::cut\+Sphere (\begin{DoxyParamCaption}\item[{int}]{xcenter,  }\item[{int}]{ycenter,  }\item[{int}]{zcenter,  }\item[{int}]{radius }\end{DoxyParamCaption})}
+
+
+
+cut\+Sphere function to cut a voxel\textquotesingle{}s sphere 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xcenter} & sphere center position in x-\/axis \\
+\hline
+{\em ycenter} & sphere center position in y-\/axis \\
+\hline
+{\em zcenter} & sphere center position in z-\/axis \\
+\hline
+{\em radius} & sphere radius \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{107 \{}
+\DoxyCodeLine{108     \textcolor{keywordtype}{double} dist;}
+\DoxyCodeLine{109     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < nx; i++)\{}
+\DoxyCodeLine{110         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < ny; j++)\{}
+\DoxyCodeLine{111             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k = 0; k < nz; k++)\{}
+\DoxyCodeLine{112                 dist = pow(i -\/ xcenter,2) + pow(j -\/ ycenter,2) + pow(k -\/ zcenter,2);}
+\DoxyCodeLine{113                 \textcolor{keywordflow}{if}(dist <= pow(radius,2))\{ \textcolor{comment}{// tentar tirando a raiz}}
+\DoxyCodeLine{114                     \mbox{\hyperlink{class_sculptor_a56149f4f3357655535e4374c5d77ab2e}{cutVoxel}}(i,j,k);}
+\DoxyCodeLine{115                 \}}
+\DoxyCodeLine{116             \}}
+\DoxyCodeLine{117         \}}
+\DoxyCodeLine{118     \}}
+\DoxyCodeLine{119 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sculptor_a56149f4f3357655535e4374c5d77ab2e}\label{class_sculptor_a56149f4f3357655535e4374c5d77ab2e}} 
+\index{Sculptor@{Sculptor}!cutVoxel@{cutVoxel}}
+\index{cutVoxel@{cutVoxel}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{cutVoxel()}{cutVoxel()}}
+{\footnotesize\ttfamily void Sculptor\+::cut\+Voxel (\begin{DoxyParamCaption}\item[{int}]{x0,  }\item[{int}]{y0,  }\item[{int}]{z0 }\end{DoxyParamCaption})}
+
+
+
+cut\+Voxel function to cut a voxel 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x0} & position to cut a voxel in x-\/axis \\
+\hline
+{\em y0} & position to cut a voxel in y-\/axis \\
+\hline
+{\em z0} & position to put a voxel in z-\/axis \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63 \{}
+\DoxyCodeLine{64     \textcolor{keywordflow}{if}(x0 >= 0 \&\& x0 < nx \&\& y0 >= 0 \&\& y0 < ny \&\& z0 >= 0 \&\& z0 < nz)\{}
+\DoxyCodeLine{65         v[x0][y0][z0].isOn = \textcolor{keyword}{false};}
+\DoxyCodeLine{66     \}}
+\DoxyCodeLine{67 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sculptor_a9fe571665b521aad968628ff6b14e0c6}\label{class_sculptor_a9fe571665b521aad968628ff6b14e0c6}} 
+\index{Sculptor@{Sculptor}!getPlano@{getPlano}}
+\index{getPlano@{getPlano}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{getPlano()}{getPlano()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ \mbox{\hyperlink{struct_voxel}{Voxel}} $>$ $>$ Sculptor\+::get\+Plano (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{plano = {\ttfamily XY} }\end{DoxyParamCaption})}
+
+
+
+get\+Plano read the interface plan 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & z-\/axis \\
+\hline
+{\em plano} & plan (default\+: XY) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{307 \{}
+\DoxyCodeLine{308     vector<vector<Voxel>> re;}
+\DoxyCodeLine{309     vector<Voxel> line;}
+\DoxyCodeLine{310     \textcolor{keywordflow}{if}(plano == XY)\{}
+\DoxyCodeLine{311         line.resize(ny);}
+\DoxyCodeLine{312         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < nx; j++)\{}
+\DoxyCodeLine{313             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k = 0; k < ny; k++)\{}
+\DoxyCodeLine{314                 line[k].r = v[j][k][i].r;}
+\DoxyCodeLine{315                 line[k].g = v[j][k][i].g;}
+\DoxyCodeLine{316                 line[k].b = v[j][k][i].b;}
+\DoxyCodeLine{317                 line[k].isOn = v[j][k][i].isOn;}
+\DoxyCodeLine{318             \}}
+\DoxyCodeLine{319             re.push\_back(line);}
+\DoxyCodeLine{320         \}}
+\DoxyCodeLine{321      \}}
+\DoxyCodeLine{322     \textcolor{comment}{/* future upgrades}}
+\DoxyCodeLine{323 \textcolor{comment}{      else if(plano == YZ)\{}}
+\DoxyCodeLine{324 \textcolor{comment}{        line.resize(nz);}}
+\DoxyCodeLine{325 \textcolor{comment}{        for(int j = 0; j < ny; j++)\{}}
+\DoxyCodeLine{326 \textcolor{comment}{            for(int k = 0; k < nz; k++)\{}}
+\DoxyCodeLine{327 \textcolor{comment}{                line[k].r = v[i][j][k].r;}}
+\DoxyCodeLine{328 \textcolor{comment}{                line[k].g = v[i][j][k].g;}}
+\DoxyCodeLine{329 \textcolor{comment}{                line[k].b = v[i][j][k].b;}}
+\DoxyCodeLine{330 \textcolor{comment}{                line[k].isOn = v[i][j][k].isOn;}}
+\DoxyCodeLine{331 \textcolor{comment}{            \}}}
+\DoxyCodeLine{332 \textcolor{comment}{            re.push\_back(line);}}
+\DoxyCodeLine{333 \textcolor{comment}{        \}}}
+\DoxyCodeLine{334 \textcolor{comment}{    \} else \{}}
+\DoxyCodeLine{335 \textcolor{comment}{        line.resize(nx);}}
+\DoxyCodeLine{336 \textcolor{comment}{        for(int j = 0; j < nz; j++)\{}}
+\DoxyCodeLine{337 \textcolor{comment}{            for(int k = 0; k < nx; k++)\{}}
+\DoxyCodeLine{338 \textcolor{comment}{                line[k].r = v[j][i][k].r;}}
+\DoxyCodeLine{339 \textcolor{comment}{                line[k].g = v[j][i][k].g;}}
+\DoxyCodeLine{340 \textcolor{comment}{                line[k].b = v[j][i][k].b;}}
+\DoxyCodeLine{341 \textcolor{comment}{                line[k].isOn = v[j][i][k].isOn;}}
+\DoxyCodeLine{342 \textcolor{comment}{            \}}}
+\DoxyCodeLine{343 \textcolor{comment}{            re.push\_back(line);}}
+\DoxyCodeLine{344 \textcolor{comment}{        \}}}
+\DoxyCodeLine{345 \textcolor{comment}{    \}}}
+\DoxyCodeLine{346 \textcolor{comment}{    */}}
+\DoxyCodeLine{347     \textcolor{keywordflow}{return} re;}
+\DoxyCodeLine{348 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sculptor_a311ad7a0fb83fc67ac1f378be8e99fe1}\label{class_sculptor_a311ad7a0fb83fc67ac1f378be8e99fe1}} 
+\index{Sculptor@{Sculptor}!putBox@{putBox}}
+\index{putBox@{putBox}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{putBox()}{putBox()}}
+{\footnotesize\ttfamily void Sculptor\+::put\+Box (\begin{DoxyParamCaption}\item[{int}]{x0,  }\item[{int}]{x1,  }\item[{int}]{y0,  }\item[{int}]{y1,  }\item[{int}]{z0,  }\item[{int}]{z1 }\end{DoxyParamCaption})}
+
+
+
+put\+Box function to put a voxel\textquotesingle{}s box 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x0} & initial position to put a voxel in x-\/axis \\
+\hline
+{\em x1} & final position to put a voxel in x-\/axis \\
+\hline
+{\em y0} & initial position to put a voxel in y-\/axis \\
+\hline
+{\em y1} & final position to put a voxel in y-\/axis \\
+\hline
+{\em z0} & initial position to put a voxel in z-\/axis \\
+\hline
+{\em z1} & final position to put a voxel in z-\/axis \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{70 \{}
+\DoxyCodeLine{71     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = x0; i <= x1; i++)\{}
+\DoxyCodeLine{72         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = y0; j <= y1; j++)\{}
+\DoxyCodeLine{73             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k = z0; k <= z1; k++)\{}
+\DoxyCodeLine{74                 \mbox{\hyperlink{class_sculptor_a2b957e9d0a2f365f9181af5d116a2b8c}{putVoxel}}(i,j,k);}
+\DoxyCodeLine{75             \}}
+\DoxyCodeLine{76         \}}
+\DoxyCodeLine{77     \}}
+\DoxyCodeLine{78 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sculptor_a093615b0c2b9b3a17a56300b9b939f39}\label{class_sculptor_a093615b0c2b9b3a17a56300b9b939f39}} 
+\index{Sculptor@{Sculptor}!putEllipsoid@{putEllipsoid}}
+\index{putEllipsoid@{putEllipsoid}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{putEllipsoid()}{putEllipsoid()}}
+{\footnotesize\ttfamily void Sculptor\+::put\+Ellipsoid (\begin{DoxyParamCaption}\item[{int}]{xcenter,  }\item[{int}]{ycenter,  }\item[{int}]{zcenter,  }\item[{int}]{rx,  }\item[{int}]{ry,  }\item[{int}]{rz }\end{DoxyParamCaption})}
+
+
+
+put\+Ellipsoid function to put a volxel\textquotesingle{}s ellipsoid 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xcenter} & ellipsoid center position in x-\/axis \\
+\hline
+{\em ycenter} & ellipsoid center position in y-\/axis \\
+\hline
+{\em zcenter} & ellipsoid center position in z-\/axis \\
+\hline
+{\em rx} & ellipsoid radius on the x-\/axis \\
+\hline
+{\em ry} & ellipsoid radius on the y-\/axis \\
+\hline
+{\em rz} & allipsoid radius on the z-\/axis \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{122 \{}
+\DoxyCodeLine{123     \textcolor{comment}{// FÓRMULA DA ELIPSOIDE: (x -\/ x0)\string^2/a\string^2 + (y -\/ y0)\string^2/b\string^2 + (z -\/ z0)\string^2/c\string^2 <= 1}}
+\DoxyCodeLine{124     \textcolor{comment}{// CASO O RAIO EM ALGUM DOS EIXOS SEJA IGUAL A -\/, TEREMOS UMA ELÍPSE}}
+\DoxyCodeLine{125     \textcolor{keywordtype}{double} dist;}
+\DoxyCodeLine{126     \textcolor{keywordflow}{if}(rx == 0)\{}
+\DoxyCodeLine{127        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j <= ny; j++)\{}
+\DoxyCodeLine{128            \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k = 0; k <= nz; k++)\{}
+\DoxyCodeLine{129                dist = pow(j -\/ ycenter, 2)/pow(ry, 2) + pow(k -\/ zcenter, 2)/pow(rz, 2);}
+\DoxyCodeLine{130                \textcolor{keywordflow}{if}(dist <= 1)\{}
+\DoxyCodeLine{131                    \mbox{\hyperlink{class_sculptor_a2b957e9d0a2f365f9181af5d116a2b8c}{putVoxel}}(xcenter,j,k);}
+\DoxyCodeLine{132                \}}
+\DoxyCodeLine{133            \}}
+\DoxyCodeLine{134         \}}
+\DoxyCodeLine{135     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(ry == 0)\{}
+\DoxyCodeLine{136        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<= nx; i++)\{}
+\DoxyCodeLine{137            \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k = 0; k <= nz; k++)\{}
+\DoxyCodeLine{138                dist = pow(i -\/ xcenter, 2)/pow(rx, 2) + pow(k -\/ zcenter, 2)/pow(rz, 2);}
+\DoxyCodeLine{139                \textcolor{keywordflow}{if}(dist <= 1)\{}
+\DoxyCodeLine{140                    \mbox{\hyperlink{class_sculptor_a2b957e9d0a2f365f9181af5d116a2b8c}{putVoxel}}(i,ycenter,k); \textcolor{comment}{//habilita os Voxels no intervalo}}
+\DoxyCodeLine{141                \}}
+\DoxyCodeLine{142            \}}
+\DoxyCodeLine{143         \}}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(rz == 0)\{}
+\DoxyCodeLine{146        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i <= nx; i++)\{}
+\DoxyCodeLine{147            \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0; j <= ny; j++)\{}
+\DoxyCodeLine{148                dist = pow(i -\/ xcenter, 2)/pow(rx, 2) + pow(j -\/ ycenter, 2)/pow(ry, 2);}
+\DoxyCodeLine{149                \textcolor{keywordflow}{if}(dist <= 1)\{}
+\DoxyCodeLine{150                    \mbox{\hyperlink{class_sculptor_a2b957e9d0a2f365f9181af5d116a2b8c}{putVoxel}}(i,j,zcenter); \textcolor{comment}{//habilita os Voxels no intervalo}}
+\DoxyCodeLine{151                \}}
+\DoxyCodeLine{152            \}}
+\DoxyCodeLine{153         \}}
+\DoxyCodeLine{154     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{155        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < nx; i++)\{}
+\DoxyCodeLine{156            \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < ny; j++)\{}
+\DoxyCodeLine{157                \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k = 0; k < nz; k++)\{}
+\DoxyCodeLine{158                    dist = pow(i -\/ xcenter,2)/pow(rx, 2) + pow(j -\/ ycenter,2)/pow(ry, 2) + pow(k -\/ zcenter,2)/pow(rz, 2);}
+\DoxyCodeLine{159                    \textcolor{keywordflow}{if} (dist <= 1)\{}
+\DoxyCodeLine{160                        \mbox{\hyperlink{class_sculptor_a2b957e9d0a2f365f9181af5d116a2b8c}{putVoxel}}(i,j,k);}
+\DoxyCodeLine{161                    \}}
+\DoxyCodeLine{162                \}}
+\DoxyCodeLine{163            \}}
+\DoxyCodeLine{164        \}}
+\DoxyCodeLine{165     \}}
+\DoxyCodeLine{166 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sculptor_a794a2b6ee8fc8098fd6150cb46101fc6}\label{class_sculptor_a794a2b6ee8fc8098fd6150cb46101fc6}} 
+\index{Sculptor@{Sculptor}!putSphere@{putSphere}}
+\index{putSphere@{putSphere}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{putSphere()}{putSphere()}}
+{\footnotesize\ttfamily void Sculptor\+::put\+Sphere (\begin{DoxyParamCaption}\item[{int}]{xcenter,  }\item[{int}]{ycenter,  }\item[{int}]{zcenter,  }\item[{int}]{radius }\end{DoxyParamCaption})}
+
+
+
+put\+Sphere function to put a voxel\textquotesingle{}s sphere 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xcenter} & sphere center position in x-\/axis \\
+\hline
+{\em ycenter} & sphere center position in y-\/axis \\
+\hline
+{\em zcenter} & sphere center position in z-\/axis \\
+\hline
+{\em radius} & sphere radius \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{92 \{}
+\DoxyCodeLine{93     \textcolor{keywordtype}{double} dist;}
+\DoxyCodeLine{94     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < nx; i++)\{}
+\DoxyCodeLine{95         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < ny; j++)\{}
+\DoxyCodeLine{96             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k = 0; k < nz; k++)\{}
+\DoxyCodeLine{97                 dist = pow(i -\/ xcenter,2) + pow(j -\/ ycenter,2) + pow(k -\/ zcenter,2);}
+\DoxyCodeLine{98                 \textcolor{keywordflow}{if}(dist <= pow(radius,2))\{ \textcolor{comment}{// tentar tirando a raiz}}
+\DoxyCodeLine{99                     \mbox{\hyperlink{class_sculptor_a2b957e9d0a2f365f9181af5d116a2b8c}{putVoxel}}(i,j,k);}
+\DoxyCodeLine{100                 \}}
+\DoxyCodeLine{101             \}}
+\DoxyCodeLine{102         \}}
+\DoxyCodeLine{103     \}}
+\DoxyCodeLine{104 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sculptor_a2b957e9d0a2f365f9181af5d116a2b8c}\label{class_sculptor_a2b957e9d0a2f365f9181af5d116a2b8c}} 
+\index{Sculptor@{Sculptor}!putVoxel@{putVoxel}}
+\index{putVoxel@{putVoxel}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{putVoxel()}{putVoxel()}}
+{\footnotesize\ttfamily void Sculptor\+::put\+Voxel (\begin{DoxyParamCaption}\item[{int}]{x0,  }\item[{int}]{y0,  }\item[{int}]{z0 }\end{DoxyParamCaption})}
+
+
+
+put\+Voxel function to put a voxel 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x0} & position to put a voxel in x-\/axis \\
+\hline
+{\em y0} & position to put a voxel in y-\/axis \\
+\hline
+{\em z0} & position to put a voxel in z-\/axis \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53 \{}
+\DoxyCodeLine{54     \textcolor{keywordflow}{if}(x0 >= 0 \&\& x0 < nx \&\& y0 >= 0 \&\& y0 < ny \&\& z0 >= 0 \&\& z0 < nz)\{}
+\DoxyCodeLine{55         v[x0][y0][z0].isOn = \textcolor{keyword}{true};}
+\DoxyCodeLine{56         v[x0][y0][z0].r = r;}
+\DoxyCodeLine{57         v[x0][y0][z0].g = g;}
+\DoxyCodeLine{58         v[x0][y0][z0].b = b;}
+\DoxyCodeLine{59         \}}
+\DoxyCodeLine{60 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sculptor_a3c536a107aac6bf67519d3b1a4b4176a}\label{class_sculptor_a3c536a107aac6bf67519d3b1a4b4176a}} 
+\index{Sculptor@{Sculptor}!setColor@{setColor}}
+\index{setColor@{setColor}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily void Sculptor\+::set\+Color (\begin{DoxyParamCaption}\item[{float}]{r\+\_\+,  }\item[{float}]{g\+\_\+,  }\item[{float}]{b\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+set\+Color function to set shape color 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r\+\_\+} & red color \\
+\hline
+{\em g\+\_\+} & green color \\
+\hline
+{\em b\+\_\+} & blue color \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46 \{}
+\DoxyCodeLine{47     r = r\_;}
+\DoxyCodeLine{48     b = b\_;}
+\DoxyCodeLine{49     g = g\_;}
+\DoxyCodeLine{50 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_sculptor_a4faae5ab2d72f2f682005f468e7e8a92}\label{class_sculptor_a4faae5ab2d72f2f682005f468e7e8a92}} 
+\index{Sculptor@{Sculptor}!writeOFF@{writeOFF}}
+\index{writeOFF@{writeOFF}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{writeOFF()}{writeOFF()}}
+{\footnotesize\ttfamily void Sculptor\+::write\+OFF (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+
+write\+OFF fuction to write a file type OFF 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & file name \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{215                                       \{}
+\DoxyCodeLine{216     \textcolor{comment}{/* FORMATO DO ARQUIVO OFF}}
+\DoxyCodeLine{217 \textcolor{comment}{        OFF}}
+\DoxyCodeLine{218 \textcolor{comment}{        NVertices  NFaces  NArestas}}
+\DoxyCodeLine{219 \textcolor{comment}{        x[0]  y[0]  z[0]}}
+\DoxyCodeLine{220 \textcolor{comment}{        ...}}
+\DoxyCodeLine{221 \textcolor{comment}{        x[NVertices-\/1]  y[NVertices-\/1]  z[NVertices-\/1]}}
+\DoxyCodeLine{222 \textcolor{comment}{        Nv v[0] v[1] ... v[Nv-\/1]  r g b a}}
+\DoxyCodeLine{223 \textcolor{comment}{        Nv v[0] v[1] ... v[Nv-\/1]  r g b a}}
+\DoxyCodeLine{224 \textcolor{comment}{        ...}}
+\DoxyCodeLine{225 \textcolor{comment}{        Nv v[0] v[1] ... v[Nv-\/1]  r g b a}}
+\DoxyCodeLine{226 \textcolor{comment}{    */}}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{228     \textcolor{keywordtype}{int} x, y, z, t, index;}
+\DoxyCodeLine{229     \textcolor{keywordtype}{float} lado = 0.5;}
+\DoxyCodeLine{230     ofstream f;}
+\DoxyCodeLine{231     t = 0;}
+\DoxyCodeLine{232     f.open(filename);}
+\DoxyCodeLine{233     f << \textcolor{stringliteral}{"{}OFF\(\backslash\)n"{}};}
+\DoxyCodeLine{234 }
+\DoxyCodeLine{235     \textcolor{keywordflow}{for}(x = 0; x < nx; x++)\{}
+\DoxyCodeLine{236         \textcolor{keywordflow}{for}(y = 0; y < ny; y++)\{}
+\DoxyCodeLine{237             \textcolor{keywordflow}{for}(z = 0; z < nz; z++)\{}
+\DoxyCodeLine{238                 \textcolor{keywordflow}{if}(v[x][y][z].isOn)\{}
+\DoxyCodeLine{239                     t++; \textcolor{comment}{//  QUANTIDADE DE VOXELS ATIVOS}}
+\DoxyCodeLine{240                 \}}
+\DoxyCodeLine{241             \}}
+\DoxyCodeLine{242         \}}
+\DoxyCodeLine{243      \}}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{245     f << t*8 << \textcolor{stringliteral}{"{} "{}} << t*6 << \textcolor{stringliteral}{"{} 0 \(\backslash\)n"{}}; \textcolor{comment}{//   VÉRTICES, FACES, ARESTAS = 0}}
+\DoxyCodeLine{246     \textcolor{keywordflow}{for}(x = 0; x < nx; x++)\{}
+\DoxyCodeLine{247         \textcolor{keywordflow}{for}(y = 0; y < ny; y++)\{}
+\DoxyCodeLine{248             \textcolor{keywordflow}{for}(z = 0; z < nz; z++)\{}
+\DoxyCodeLine{249                 \textcolor{keywordflow}{if}(v[x][y][z].isOn)\{}
+\DoxyCodeLine{250                     \textcolor{comment}{//  VÉRTICES DO VOXEL EM FORMATO DE CUBO}}
+\DoxyCodeLine{251                     f << x -\/ lado << \textcolor{stringliteral}{"{} "{}} << y + lado << \textcolor{stringliteral}{"{} "{}} << z -\/ lado << \textcolor{stringliteral}{"{}\(\backslash\)n"{}} << flush; \textcolor{comment}{//Vértice 0}}
+\DoxyCodeLine{252                     f << x -\/ lado << \textcolor{stringliteral}{"{} "{}} << y -\/ lado << \textcolor{stringliteral}{"{} "{}} << z -\/ lado << \textcolor{stringliteral}{"{}\(\backslash\)n"{}} << flush; \textcolor{comment}{//Vértice 1}}
+\DoxyCodeLine{253                     f << x + lado << \textcolor{stringliteral}{"{} "{}} << y -\/ lado << \textcolor{stringliteral}{"{} "{}} << z -\/ lado << \textcolor{stringliteral}{"{}\(\backslash\)n"{}} << flush; \textcolor{comment}{//Vértice 2}}
+\DoxyCodeLine{254                     f << x + lado << \textcolor{stringliteral}{"{} "{}} << y + lado << \textcolor{stringliteral}{"{} "{}} << z -\/ lado << \textcolor{stringliteral}{"{}\(\backslash\)n"{}} << flush; \textcolor{comment}{//Vértice 3}}
+\DoxyCodeLine{255                     f << x -\/ lado << \textcolor{stringliteral}{"{} "{}} << y + lado << \textcolor{stringliteral}{"{} "{}} << z + lado << \textcolor{stringliteral}{"{}\(\backslash\)n"{}} << flush; \textcolor{comment}{//Vértice 4}}
+\DoxyCodeLine{256                     f << x -\/ lado << \textcolor{stringliteral}{"{} "{}} << y -\/ lado << \textcolor{stringliteral}{"{} "{}} << z + lado << \textcolor{stringliteral}{"{}\(\backslash\)n"{}} << flush; \textcolor{comment}{//Vértice 5}}
+\DoxyCodeLine{257                     f << x + lado << \textcolor{stringliteral}{"{} "{}} << y -\/ lado << \textcolor{stringliteral}{"{} "{}} << z + lado << \textcolor{stringliteral}{"{}\(\backslash\)n"{}} << flush; \textcolor{comment}{//Vértice 6}}
+\DoxyCodeLine{258                     f << x + lado << \textcolor{stringliteral}{"{} "{}} << y + lado << \textcolor{stringliteral}{"{} "{}} << z + lado << \textcolor{stringliteral}{"{}\(\backslash\)n"{}} << flush; \textcolor{comment}{//Vértice 7}}
+\DoxyCodeLine{259                 \}}
+\DoxyCodeLine{260             \}}
+\DoxyCodeLine{261         \}}
+\DoxyCodeLine{262     \}}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{264     t = 0;}
+\DoxyCodeLine{265     \textcolor{comment}{// -\/-\/-\/-\/ ESCRITA DOS ÍNDICES (VÉRTICES: 8 EM 8) -\/-\/-\/-\/}}
+\DoxyCodeLine{266     \textcolor{comment}{/*}}
+\DoxyCodeLine{267 \textcolor{comment}{        Face 0: P0 P3 P2 P1}}
+\DoxyCodeLine{268 \textcolor{comment}{        Face 1: P4 P5 P6 P7}}
+\DoxyCodeLine{269 \textcolor{comment}{        Face 2: P0 P1 P5 P4}}
+\DoxyCodeLine{270 \textcolor{comment}{        Face 3: P0 P4 P7 P3}}
+\DoxyCodeLine{271 \textcolor{comment}{        Face 4: P7 P6 P2 P3}}
+\DoxyCodeLine{272 \textcolor{comment}{        Face 5: P1 P2 P6 P5}}
+\DoxyCodeLine{273 \textcolor{comment}{    */}}
+\DoxyCodeLine{274     \textcolor{keywordflow}{for}(x = 0; x < nx; x++)\{}
+\DoxyCodeLine{275         \textcolor{keywordflow}{for}(y = 0; y < ny; y++)\{}
+\DoxyCodeLine{276             \textcolor{keywordflow}{for}(z = 0; z < nz; z++)\{}
+\DoxyCodeLine{277                 \textcolor{keywordflow}{if}(v[x][y][z].isOn)\{}
+\DoxyCodeLine{278                     index = t*8;}
+\DoxyCodeLine{279                     \textcolor{comment}{// FACE 0}}
+\DoxyCodeLine{280                     f << fixed;}
+\DoxyCodeLine{281                     f << 4 << \textcolor{stringliteral}{"{} "{}} << index + 0 << \textcolor{stringliteral}{"{} "{}} << index + 3 << \textcolor{stringliteral}{"{} "{}} << index + 2 << \textcolor{stringliteral}{"{} "{}} << index + 1 << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{282                     f << setprecision(2) << v[x][y][z].r/255.0 << \textcolor{stringliteral}{"{} "{}} << setprecision(2) << v[x][y][z].g/255.0 << \textcolor{stringliteral}{"{} "{}} << setprecision(2) << v[x][y][z].b/255.0 << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{283                     \textcolor{comment}{// FACE 1}}
+\DoxyCodeLine{284                     f << 4 << \textcolor{stringliteral}{"{} "{}} << index + 4 << \textcolor{stringliteral}{"{} "{}} << index + 5 << \textcolor{stringliteral}{"{} "{}} << index + 6 << \textcolor{stringliteral}{"{} "{}} << index + 7 << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{285                     f << setprecision(2) << v[x][y][z].r/255.0 << \textcolor{stringliteral}{"{} "{}} << setprecision(2) << v[x][y][z].g/255.0 << \textcolor{stringliteral}{"{} "{}} << setprecision(2) << v[x][y][z].b/255.0 << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{286                     \textcolor{comment}{// FACE 2}}
+\DoxyCodeLine{287                     f << 4 << \textcolor{stringliteral}{"{} "{}} << index + 0 << \textcolor{stringliteral}{"{} "{}} << index + 1 << \textcolor{stringliteral}{"{} "{}} << index + 5 << \textcolor{stringliteral}{"{} "{}} << index + 4 << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{288                     f << setprecision(2) << v[x][y][z].r/255.0 << \textcolor{stringliteral}{"{} "{}} << setprecision(2) << v[x][y][z].g/255.0 << \textcolor{stringliteral}{"{} "{}} << setprecision(2) << v[x][y][z].b/255.0 << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{289                     \textcolor{comment}{// FACE 3}}
+\DoxyCodeLine{290                     f << 4 << \textcolor{stringliteral}{"{} "{}} << index + 0 << \textcolor{stringliteral}{"{} "{}} << index + 4 << \textcolor{stringliteral}{"{} "{}} << index + 7 << \textcolor{stringliteral}{"{} "{}} << index + 3 << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{291                     f << setprecision(2) << v[x][y][z].r/255.0 << \textcolor{stringliteral}{"{} "{}} << setprecision(2) << v[x][y][z].g/255.0 << \textcolor{stringliteral}{"{} "{}} << setprecision(2) << v[x][y][z].b/255.0 << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{292                     \textcolor{comment}{// FACE 4}}
+\DoxyCodeLine{293                     f << 4 << \textcolor{stringliteral}{"{} "{}} << index + 7 << \textcolor{stringliteral}{"{} "{}} << index + 6 << \textcolor{stringliteral}{"{} "{}} << index + 2 << \textcolor{stringliteral}{"{} "{}} << index + 3 << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{294                     f << setprecision(2) << v[x][y][z].r/255.0 << \textcolor{stringliteral}{"{} "{}} << setprecision(2) << v[x][y][z].g/255.0 << \textcolor{stringliteral}{"{} "{}} << setprecision(2) << v[x][y][z].b/255.0 << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{295                     \textcolor{comment}{// FACE 5}}
+\DoxyCodeLine{296                     f << 4 << \textcolor{stringliteral}{"{} "{}} << index + 1 << \textcolor{stringliteral}{"{} "{}} << index + 2 << \textcolor{stringliteral}{"{} "{}} << index + 6 << \textcolor{stringliteral}{"{} "{}} << index + 5 << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{297                     f << setprecision(2) << v[x][y][z].r/255.0 << \textcolor{stringliteral}{"{} "{}} << setprecision(2) << v[x][y][z].g/255.0 << \textcolor{stringliteral}{"{} "{}} << setprecision(2) << v[x][y][z].b/255.0 << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{298                     t++;  \textcolor{comment}{// INCREMENTA O TOTAL DE VOXELS EM FORMATO DE CUBO}}
+\DoxyCodeLine{299                 \}}
+\DoxyCodeLine{300             \}}
+\DoxyCodeLine{301         \}}
+\DoxyCodeLine{302     \}}
+\DoxyCodeLine{303     f.close();}
+\DoxyCodeLine{304 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sculptor.\+h\item 
+sculptor.\+cpp\end{DoxyCompactItemize}

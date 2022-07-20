@@ -1,0 +1,122 @@
+\hypertarget{class_main_window}{}\doxysection{Main\+Window Class Reference}
+\label{class_main_window}\index{MainWindow@{MainWindow}}
+
+
+The \mbox{\hyperlink{class_main_window}{Main\+Window}} class is the the main window of our program.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+Inheritance diagram for Main\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_window}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_window_a542a7527ced73b2c9bc14f8dc9661a66}\label{class_main_window_a542a7527ced73b2c9bc14f8dc9661a66}} 
+void \mbox{\hyperlink{class_main_window_a542a7527ced73b2c9bc14f8dc9661a66}{quit}} ()
+\begin{DoxyCompactList}\small\item\em quit slot to close the mainwindow \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ad08e1edaacfd205d1fa02336885d2eff}{set\+Red}} (int r\+\_\+)
+\begin{DoxyCompactList}\small\item\em set\+Red set red color \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_af05d8e14ae1f219153cf56281b8f07fd}{set\+Green}} (int g\+\_\+)
+\begin{DoxyCompactList}\small\item\em set\+Green set green color \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a9c246e7d1efdbc6e597bc552000e1bd7}{set\+Blue}} (int b\+\_\+)
+\begin{DoxyCompactList}\small\item\em set\+Blue set blue color \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_window_ab8fd252f76bfb36f7d4f15355c0db3fd}\label{class_main_window_ab8fd252f76bfb36f7d4f15355c0db3fd}} 
+void \mbox{\hyperlink{class_main_window_ab8fd252f76bfb36f7d4f15355c0db3fd}{draw\+Shape}} (int, int)
+\begin{DoxyCompactList}\small\item\em draw\+Shape draw the selected shape \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_window_a4c96e78bb7134ec5eb761f7f16fc72a6}\label{class_main_window_a4c96e78bb7134ec5eb761f7f16fc72a6}} 
+void \mbox{\hyperlink{class_main_window_a4c96e78bb7134ec5eb761f7f16fc72a6}{update\+Coords}} (int, int)
+\begin{DoxyCompactList}\small\item\em update\+Coords update the coordinates \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_window_a996c5a2b6f77944776856f08ec30858d}\label{class_main_window_a996c5a2b6f77944776856f08ec30858d}} 
+{\bfseries Main\+Window} (QWidget $\ast$parent=nullptr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_main_window}{Main\+Window}} class is the the main window of our program. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_main_window_a9c246e7d1efdbc6e597bc552000e1bd7}\label{class_main_window_a9c246e7d1efdbc6e597bc552000e1bd7}} 
+\index{MainWindow@{MainWindow}!setBlue@{setBlue}}
+\index{setBlue@{setBlue}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{setBlue}{setBlue}}
+{\footnotesize\ttfamily void Main\+Window\+::set\+Blue (\begin{DoxyParamCaption}\item[{int}]{b\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+set\+Blue set blue color 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b\+\_\+} & blue \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{129 \{}
+\DoxyCodeLine{130     b = b\_;}
+\DoxyCodeLine{131     updateColor();}
+\DoxyCodeLine{132 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_main_window_af05d8e14ae1f219153cf56281b8f07fd}\label{class_main_window_af05d8e14ae1f219153cf56281b8f07fd}} 
+\index{MainWindow@{MainWindow}!setGreen@{setGreen}}
+\index{setGreen@{setGreen}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{setGreen}{setGreen}}
+{\footnotesize\ttfamily void Main\+Window\+::set\+Green (\begin{DoxyParamCaption}\item[{int}]{g\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+set\+Green set green color 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g\+\_\+} & green \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{123 \{}
+\DoxyCodeLine{124     g = g\_;}
+\DoxyCodeLine{125     updateColor();}
+\DoxyCodeLine{126 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_main_window_ad08e1edaacfd205d1fa02336885d2eff}\label{class_main_window_ad08e1edaacfd205d1fa02336885d2eff}} 
+\index{MainWindow@{MainWindow}!setRed@{setRed}}
+\index{setRed@{setRed}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{setRed}{setRed}}
+{\footnotesize\ttfamily void Main\+Window\+::set\+Red (\begin{DoxyParamCaption}\item[{int}]{r\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+set\+Red set red color 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r\+\_\+} & red \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{117 \{}
+\DoxyCodeLine{118     r = r\_;}
+\DoxyCodeLine{119     updateColor();}
+\DoxyCodeLine{120 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+mainwindow.\+h\item 
+mainwindow.\+cpp\end{DoxyCompactItemize}
